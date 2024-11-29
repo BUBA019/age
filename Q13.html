@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        border: 2px solid black;
+        width: 35%;
+        background-color: wheat;
+        border-radius: 4px;
+        margin-left: 30%;
+    }
+    input {
+        display: flex;
+        width: 95%;
+        border: 2px double black;
+        padding: 5px;
+        margin:  8px;
+        box-sizing: border-box;
+        background-color: transparent;
+        color: black;
+        border: none;
+        height: 35px;
+    }
+    input:hover {
+        background-color: white;
+    }
+    button {
+        padding: 15px;
+        background-color: green;
+        color: white;
+        margin-left: 35%;
+        width: 30%;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        }
+</style>
+<body>
+    <div>
+    <h1>WRITE A PROGRAM TO READ AGE OF A CANDIDATE AND DETERMINE WHEATHER IT IS ELIGIBLE FOR CASTING HIS/HER VOTE</h1>
+    <h3>Vote Validation</h3>
+    <label for="age"> Enter Candidate Age:</label>
+    <input type="number" id="age" placeholder="Enter Candidate Age">
+    <button onclick="canage()">Register</button>
+</div>
+    <p id="result"></p>
+    <script>
+        function canage() {
+            const a = Number(document.getElementById('age').value);
+            //age<=116
+            if (a >= 18 && a < 113) {
+                document.getElementById('result').innerText = 
+                `YOUR ARE ELIGIBLE FOR VOTE`;
+            } else if (a < 18) {
+                document.getElementById('result').innerText = 
+                'YOU ARE NOT ELIGIBLE FOR VOTE';
+            } else {
+                document.getElementById('result').innerText = 
+                `PLEASE ENTER A VALID AGE`;
+            }
+          
+        }
+    
+    </script>
+</body>
+</html>
